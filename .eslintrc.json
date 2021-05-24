@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".tsx", ".ts", ".jsx"] }
+    ],
+    "prettier/prettier": ["warn"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-named-as-default": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
