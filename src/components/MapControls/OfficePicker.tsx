@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import _ from 'lodash';
+import { usePosition } from 'use-position';
 
 import locations, { locationType } from '../../data/locations';
-
 import locationArrowBlack from '../../assets/icons/location-arrow-black.png';
 import locationPinBlack from '../../assets/icons/location_icon_black.png';
+import getNearestOffice from '../../functions/getNearestOffice';
 
 const OfficePickerWrapper = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ const OfficePickerWrapper = styled.div`
 `;
 
 const OfficePickerContainer = styled.div`
+  margin-right: 66px;
   border-radius: 25px;
   height: 50px;
   background: #fff;
@@ -64,7 +66,7 @@ const OfficeButton = styled.div<OfficeButtonProps>`
 `;
 
 interface OfficeButtonIconProps {
-  active: boolean;
+  active?: boolean;
 }
 
 const OfficeButtonIcon = styled.img<OfficeButtonIconProps>`
@@ -76,6 +78,21 @@ const OfficeButtonIcon = styled.img<OfficeButtonIconProps>`
     `
       filter: invert(100%);
   `}
+`;
+
+const CurrentLocationButton = styled.div`
+  margin-right: 16px;
+  height: 50px;
+  width: 50px;
+  background: #ffffff;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 48px;
 `;
 
 export interface OfficePickerProps {
@@ -90,7 +107,7 @@ const OfficePicker = (props: OfficePickerProps) => {
   const { currentOffice, setCurrentOffice, map } = props;
 
   // eslint-disable-next-line
-  const handleClick = (id: number) => {
+  const handleOfficeClick = (id: number) => {
     const newOffice: locationType =
       _.values(locations).find((location) => location.id === id) ||
       locations.singapore;
@@ -98,8 +115,31 @@ const OfficePicker = (props: OfficePickerProps) => {
     map?.setView(newOffice.coords, 15);
   };
 
+  const { latitude, longitude, errorMessage } = usePosition(true);
+
+  const handleCurrentLocationClick = () => {
+    if (errorMessage) {
+      // eslint-disable-next-line no-alert
+      window.alert(
+        'Unable to refresh ride data. Refer to console for details'
+      );
+      // eslint-disable-next-line no-console
+      console.error(errorMessage);
+    }
+
+    if (latitude && longitude) {
+      const newOffice = getNearestOffice({ latitude, longitude });
+
+      setCurrentOffice(newOffice);
+      map?.setView(newOffice.coords, 15);
+    }
+  };
+
   return (
     <OfficePickerWrapper>
+      <CurrentLocationButton onClick={handleCurrentLocationClick}>
+        <OfficeButtonIcon alt="" src={locationArrowBlack} />
+      </CurrentLocationButton>
       <OfficePickerContainer>
         {_.values(locations).map((location: locationType) => {
           const active: boolean =
@@ -107,13 +147,14 @@ const OfficePicker = (props: OfficePickerProps) => {
 
           return (
             <OfficeButton
-              onClick={() => handleClick(location.id)}
+              onClick={() => handleOfficeClick(location.id)}
               active={active}
               key={location.id}
             >
               <OfficeButtonIcon
                 alt=""
-                src={active ? locationArrowBlack : locationPinBlack}
+                // src={active ? locationArrowBlack : locationPinBlack}
+                src={locationPinBlack}
                 active={active}
               />
               {location.name}

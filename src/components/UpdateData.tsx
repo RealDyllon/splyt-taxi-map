@@ -1,11 +1,10 @@
 import { LatLngTuple } from 'leaflet';
 import React, { useEffect } from 'react';
 import { usePosition } from 'use-position';
-import haversine from 'haversine-distance';
-import _ from 'lodash';
 
-import locations, { locationType } from '../data/locations';
+import { locationType } from '../data/locations';
 import taxi from '../ts/interfaces/taxi';
+import getNearestOffice from '../functions/getNearestOffice';
 
 interface Props {
   setTaxis: React.Dispatch<React.SetStateAction<taxi[]>>;
@@ -45,7 +44,9 @@ const UpdateData = (props: Props) => {
       })
       .catch((err) => {
         // eslint-disable-next-line no-alert
-        window.alert('Unable to refresh ride data');
+        window.alert(
+          'Unable to refresh ride data. Refer to console for details'
+        );
         // eslint-disable-next-line no-console
         console.error(err);
       });
@@ -56,50 +57,28 @@ const UpdateData = (props: Props) => {
   }, [currentOffice]);
 
   const handleLaunch = async () => {
-    // read geolocation
-  };
-
-  useEffect(() => {
-    handleLaunch();
-
-    // console.log(
-    //   'location',
-    //   JSON.stringify({
-    //     hello: 'world',
-    //     latitude,
-    //     longitude,
-    //     errorMessage,
-    //   })
-    // );
+    if (errorMessage) {
+      // eslint-disable-next-line no-alert
+      window.alert(
+        'Unable to refresh ride data. Refer to console for details'
+      );
+      // eslint-disable-next-line no-console
+      console.error(errorMessage);
+    }
 
     if (latitude && longitude) {
-      const locationsArray = _.values(locations);
-
-      const distancesFromOffices = locationsArray.map((location) =>
-        haversine(
-          { latitude, longitude },
-          { lat: location.coords[0], lng: location.coords[1] }
-        )
-      );
-
-      const indexOfSmallest = distancesFromOffices.indexOf(
-        Math.min.apply(null, distancesFromOffices)
-      );
-
-      // console.log('indexOfSmallest', indexOfSmallest);
-
-      const newOffice =
-        locationsArray.find(
-          (location) =>
-            location.id === locationsArray[indexOfSmallest].id
-        ) || locations.singapore;
+      const newOffice = getNearestOffice({ latitude, longitude });
 
       setCurrentOffice(newOffice);
       map?.setView(newOffice.coords, 15);
     }
-  }, [latitude, longitude]);
+  };
+
+  useEffect(() => {
+    handleLaunch();
+  }, [latitude, longitude, errorMessage]);
 
   return null;
-};;
+};
 
 export default UpdateData;
