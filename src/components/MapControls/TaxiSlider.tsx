@@ -12,7 +12,7 @@ const TaxiSliderWrapper = styled.div`
   width: 40px;
 
   @media (max-width: 768px) {
-    bottom: 90px;
+    bottom: 110px;
   }
 `;
 
