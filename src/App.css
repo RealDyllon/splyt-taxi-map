@@ -1,13 +1,14 @@
 .App {
   text-align: center;
+  height: 100vh;
+  max-height: -webkit-fill-available;
 }
 
 #leafletMap {
   top: 0;
   bottom: 0;
-  height: 100vh;
   width: 100vw;
-  height: -webkit-fill-available;
+  height: 100%;
 }
 
 .leafletOfficePopup .leaflet-popup-content-wrapper {
