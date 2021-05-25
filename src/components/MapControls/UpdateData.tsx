@@ -2,9 +2,9 @@ import { LatLngTuple } from 'leaflet';
 import React, { useEffect } from 'react';
 import { usePosition } from 'use-position';
 
-import { locationType } from '../data/locations';
-import taxi from '../ts/interfaces/taxi';
-import getNearestOffice from '../functions/getNearestOffice';
+import { locationType } from '../../data/locations';
+import taxi from '../../ts/interfaces/taxi';
+import getNearestOffice from '../../functions/getNearestOffice';
 
 interface Props {
   setTaxis: React.Dispatch<React.SetStateAction<taxi[]>>;

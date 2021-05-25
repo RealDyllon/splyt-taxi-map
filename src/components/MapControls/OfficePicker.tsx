@@ -7,6 +7,7 @@ import locations, { locationType } from '../../data/locations';
 import locationArrowBlack from '../../assets/icons/location-arrow-black.png';
 import locationPinBlack from '../../assets/icons/location_icon_black.png';
 import getNearestOffice from '../../functions/getNearestOffice';
+import { RoundButton } from '../styled';
 
 const OfficePickerWrapper = styled.div`
   display: flex;
@@ -62,21 +63,6 @@ const OfficeButton = styled.div<OfficeButtonProps>`
     `
       background: #46BEDB;
       color: #fff;
-  `}
-`;
-
-interface OfficeButtonIconProps {
-  active?: boolean;
-}
-
-const OfficeButtonIcon = styled.img<OfficeButtonIconProps>`
-  height: 18px;
-  width: 18px;
-  margin-right: 4px;
-  ${(props) =>
-    props.active &&
-    `
-      filter: invert(100%);
   `}
 `;
 
@@ -138,7 +124,7 @@ const OfficePicker = (props: OfficePickerProps) => {
   return (
     <OfficePickerWrapper>
       <CurrentLocationButton onClick={handleCurrentLocationClick}>
-        <OfficeButtonIcon alt="" src={locationArrowBlack} />
+        <RoundButton alt="" src={locationArrowBlack} />
       </CurrentLocationButton>
       <OfficePickerContainer>
         {_.values(locations).map((location: locationType) => {
@@ -151,7 +137,7 @@ const OfficePicker = (props: OfficePickerProps) => {
               active={active}
               key={location.id}
             >
-              <OfficeButtonIcon
+              <RoundButton
                 alt=""
                 // src={active ? locationArrowBlack : locationPinBlack}
                 src={locationPinBlack}
@@ -161,6 +147,9 @@ const OfficePicker = (props: OfficePickerProps) => {
             </OfficeButton>
           );
         })}
+        {/* <CurrentLocationButton onClick={handleCurrentLocationClick}>
+          <RoundButton alt="" src={locationArrowBlack} />
+        </CurrentLocationButton> */}
       </OfficePickerContainer>
     </OfficePickerWrapper>
   );

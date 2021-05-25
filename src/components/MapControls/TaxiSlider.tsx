@@ -1,16 +1,16 @@
 import React from 'react';
+// import Slider from 'rc-slider';
+import styled from 'styled-components';
 import Slider from 'rc-slider';
-// import styled from 'styled-components';
 
-// const TaxiSliderWrapper = styled.div`
-//   /* position: absolute;
-//   top: 0;
-//   right: -100;
-//   z-index: 999; */
-//   width: 300px;
-//   height: 400px;
-//   /* background: #ccc; */
-// `;
+const TaxiSliderWrapper = styled.div`
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  right: 0;
+  z-index: 999;
+  width: 40px;
+`;
 
 export interface TaxiSliderProps {
   setTaxiCount: React.Dispatch<React.SetStateAction<number>>;
@@ -18,40 +18,44 @@ export interface TaxiSliderProps {
 }
 
 const TaxiSlider = (props: TaxiSliderProps) => {
-  const { taxiCount } = props;
+  const { setTaxiCount, taxiCount } = props;
 
-  const handleSliderChange = () => {
+  const handleSliderChange = (value: number) => {
     // todo
+
+    setTaxiCount(value);
   };
 
   return (
-    // <TaxiSliderWrapper>
-    <Slider
-      min={0}
-      max={20}
-      vertical
-      value={taxiCount}
-      onChange={handleSliderChange}
-      railStyle={{
-        height: 2,
-      }}
-      handleStyle={{
-        height: 28,
-        width: 28,
-        position: 'relative',
-        top: 32,
-        left: 32,
-        marginLeft: -14,
-        marginTop: -14,
-        backgroundColor: 'red',
-        border: 0,
-      }}
-      trackStyle={{
-        background: 'none',
-      }}
-    />
-    // </TaxiSliderWrapper>
+    <TaxiSliderWrapper>
+      <Slider
+        min={5}
+        max={30}
+        value={taxiCount}
+        onChange={handleSliderChange}
+        style={{
+          position: 'relative',
+        }}
+        railStyle={{
+          width: 5,
+        }}
+        handleStyle={{
+          height: 28,
+          width: 28,
+          marginLeft: -12,
+          marginTop: -14,
+          backgroundColor: '#fff',
+          border: '2px #46bedb solid',
+          boxShadow: `rgba(0, 0, 0, 0.55) 0px 3px 15px`,
+        }}
+        trackStyle={{
+          background: 'none',
+        }}
+        vertical
+      />
+    </TaxiSliderWrapper>
   );
 };
+// };
 
 export default TaxiSlider;

@@ -20,6 +20,7 @@ const MapControls = (props: TaxiSliderProps & OfficePickerProps) => {
         setCurrentOffice={setCurrentOffice}
         map={map}
       />
+
       <TaxiSlider taxiCount={taxiCount} setTaxiCount={setTaxiCount} />
     </>
   );
