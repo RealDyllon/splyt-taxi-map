@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<MapContainer
+  center={
+    Array [
+      1.285194,
+      103.8522982,
+    ]
+  }
+  className="main"
+  id="leafletMap"
+  scrollWheelZoom={true}
+  whenCreated={[Function]}
+  zoom={15}
+  zoomControl={true}
+>
+  <ForwardRef(LeafComponent)
+    attribution="Map data © <a href=\\"https://www.openstreetmap.org/\\">OpenStreetMap</a> contributors, <a href=\\"https://creativecommons.org/licenses/by-sa/2.0/\\">CC-BY-SA</a>, Imagery © <a href=\\"https://www.mapbox.com/\\">Mapbox</a>"
+    keepBuffer={25}
+    url="https://api.mapbox.com/styles/v1/realdyllon/ckp2sesuf6p4i18oa3isf15z7/tiles/256/{z}/{x}/{y}@2x?access_token=undefined"
+  />
+  <ForwardRef(ContainerComponent)
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "location-icon-red.png",
+          "iconSize": Array [
+            42,
+            56,
+          ],
+          "iconUrl": "location-icon-red.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    position={
+      Array [
+        1.285194,
+        103.8522982,
+      ]
+    }
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="0-1npnjl9de4u"
+    position={
+      Array [
+        1.2883802507662878,
+        103.8520103955534,
+      ]
+    }
+    rotationAngle={92}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="1-hjupp0h57rm"
+    position={
+      Array [
+        1.2888159215060666,
+        103.85091022428048,
+      ]
+    }
+    rotationAngle={141}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="2-wdhlzehgywo"
+    position={
+      Array [
+        1.2802340085083945,
+        103.84595207149476,
+      ]
+    }
+    rotationAngle={221}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="3-of7eh49x1g"
+    position={
+      Array [
+        1.2789705804091183,
+        103.83083566290553,
+      ]
+    }
+    rotationAngle={13}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="4-tc4bnlohifg"
+    position={
+      Array [
+        1.2883521724084863,
+        103.85190637692462,
+      ]
+    }
+    rotationAngle={95}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="5-ozjmfiefy1n"
+    position={
+      Array [
+        1.2794517097542595,
+        103.8438624748383,
+      ]
+    }
+    rotationAngle={233}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="6-tosq8x6o0qe"
+    position={
+      Array [
+        1.2879512674692801,
+        103.83850343368428,
+      ]
+    }
+    rotationAngle={317}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="7-6lftejz70g"
+    position={
+      Array [
+        1.289279014644415,
+        103.87776425365138,
+      ]
+    }
+    rotationAngle={17}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="8-xfekfwmwde"
+    position={
+      Array [
+        1.2870070086071412,
+        103.85810860842777,
+      ]
+    }
+    rotationAngle={104}
+    rotationOrigin="center"
+  />
+  <ForwardRef
+    icon={
+      NewClass {
+        "_initHooksCalled": true,
+        "options": Object {
+          "iconRetinaUrl": "taxi-yellow-top-down.png",
+          "iconSize": Array [
+            48,
+            48,
+          ],
+          "iconUrl": "taxi-yellow-top-down.png",
+          "popupAnchor": Array [
+            -0,
+            -0,
+          ],
+        },
+      }
+    }
+    key="9-mf3sykobykd"
+    position={
+      Array [
+        1.2840340297420456,
+        103.86972159608051,
+      ]
+    }
+    rotationAngle={309}
+    rotationOrigin="center"
+  />
+</MapContainer>
+`;

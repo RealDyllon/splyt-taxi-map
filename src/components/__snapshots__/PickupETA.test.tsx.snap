@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<styled.div>
+  <styled.div>
+    Ride ETA: 
+     
+    <b>
+      5
+       mins
+    </b>
+  </styled.div>
+</styled.div>
+`;
