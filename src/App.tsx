@@ -4,14 +4,14 @@ import './App.css';
 
 import FullScreenMap from './components/FullScreenMap';
 import MapControls from './components/MapControls/index';
-import UpdateData from './components/UpdateData';
+import UpdateData from './components/MapControls/UpdateData';
 import PickupETA from './components/MapControls/PickupETA';
 import locations, { locationType } from './data/locations';
 import taxi from './ts/interfaces/taxi';
 
 const App: React.FC = () => {
   const [taxis, setTaxis] = useState<taxi[]>([]); // taxi/driver data
-  const [taxiCount, setTaxiCount] = useState<number>(5); // num of visible taxis
+  const [taxiCount, setTaxiCount] = useState<number>(10); // num of visible taxis
   const [pickupETA, setPickupETA] = useState<number>(-1);
 
   const [map, setMap] = useState(null);

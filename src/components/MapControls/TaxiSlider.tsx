@@ -45,8 +45,8 @@ const TaxiSlider = (props: TaxiSliderProps) => {
           marginLeft: -12,
           marginTop: -14,
           backgroundColor: '#fff',
-          border: 0,
-          boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`,
+          border: '2px #46bedb solid',
+          boxShadow: `rgba(0, 0, 0, 0.55) 0px 3px 15px`,
         }}
         trackStyle={{
           background: 'none',

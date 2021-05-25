@@ -35,7 +35,8 @@ const PickupETA = (props: Props) => {
   return (
     <Wrapper>
       <Container>
-        Ride ETA:&nbsp;<b>{pickupETA} mins</b>
+        Ride ETA:&nbsp;{' '}
+        {pickupETA > -1 ? <b>{pickupETA} mins</b> : '...'}
       </Container>
     </Wrapper>
   );
