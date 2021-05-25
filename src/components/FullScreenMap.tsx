@@ -4,7 +4,7 @@ import {
   MapContainer,
   TileLayer,
   Marker,
-  Popup,
+  // Popup,
 } from 'react-leaflet';
 
 import { locationType } from '../data/locations';
@@ -60,9 +60,9 @@ const FullScreenMap: React.FC<Props> = (props: Props) => {
       />
 
       <Marker position={position} icon={mapPinIcon}>
-        <Popup className="leafletOfficePopup">
+        {/* <Popup className="leafletOfficePopup">
           Splyt&apos;s {currentOffice.name} office
-        </Popup>
+        </Popup> */}
       </Marker>
 
       {/* taxis go here */}
@@ -80,7 +80,7 @@ const FullScreenMap: React.FC<Props> = (props: Props) => {
             rotationOrigin="center"
             icon={mapTaxiIcon}
           >
-            <Popup className="leafletTaxiPopup">taxi</Popup>
+            {/* <Popup className="leafletTaxiPopup">taxi</Popup> */}
           </RotatedMarker>
         );
       })}

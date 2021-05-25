@@ -10,6 +10,10 @@ const TaxiSliderWrapper = styled.div`
   right: 0;
   z-index: 999;
   width: 40px;
+
+  @media (max-width: 768px) {
+    bottom: 90px;
+  }
 `;
 
 export interface TaxiSliderProps {
@@ -38,6 +42,7 @@ const TaxiSlider = (props: TaxiSliderProps) => {
         }}
         railStyle={{
           width: 5,
+          background: '#aaa',
         }}
         handleStyle={{
           height: 28,
@@ -49,7 +54,9 @@ const TaxiSlider = (props: TaxiSliderProps) => {
           boxShadow: `rgba(0, 0, 0, 0.55) 0px 3px 15px`,
         }}
         trackStyle={{
-          background: 'none',
+          // background: 'none',
+          background: '#FFC135',
+          width: 5,
         }}
         vertical
       />
