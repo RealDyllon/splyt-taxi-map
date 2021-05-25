@@ -2,6 +2,17 @@
 
 Hosted Webapp is available at: [https://splyt-taxi-map.netlify.app/](https://splyt-taxi-map.netlify.app/)
 
+## Prerequisites
+
+### NodeJS
+
+Get the installer here: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
+### Yarn CLI
+
+On macOS: `brew install yarn`  
+On other systems (or macOS without homebrew): `npm install --global yarn`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -32,4 +43,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
