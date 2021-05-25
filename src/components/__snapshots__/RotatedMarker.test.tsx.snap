@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ForwardRef(ContainerComponent)
+  icon={
+    NewClass {
+      "_initHooksCalled": true,
+      "options": Object {
+        "iconRetinaUrl": "taxi-yellow-top-down.png",
+        "iconSize": Array [
+          48,
+          48,
+        ],
+        "iconUrl": "taxi-yellow-top-down.png",
+        "popupAnchor": Array [
+          -0,
+          -0,
+        ],
+      },
+    }
+  }
+  position={
+    Array [
+      1.2883802507662878,
+      103.8520103955534,
+    ]
+  }
+  rotationAngle={92}
+  rotationOrigin="center"
+>
+  <Component />
+</ForwardRef(ContainerComponent)>
+`;

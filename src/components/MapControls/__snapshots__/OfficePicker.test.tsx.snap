@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<styled.div>
+  <styled.div
+    onClick={[Function]}
+  >
+    <styled.img
+      alt=""
+      src="location-arrow-black.png"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.div
+      active={true}
+      key="1"
+      onClick={[Function]}
+    >
+      <styled.img
+        active={true}
+        alt=""
+        src="location_icon_black.png"
+      />
+      Singapore
+    </styled.div>
+    <styled.div
+      active={false}
+      key="2"
+      onClick={[Function]}
+    >
+      <styled.img
+        active={false}
+        alt=""
+        src="location_icon_black.png"
+      />
+      London
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

@@ -2,20 +2,27 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import locations from '../data/locations';
-import driversApiRes from '../data/mock/driversApi';
-import FullScreenMap from './FullScreenMap';
+import UpdateData from './UpdateData';
 
 const TestComponent = (
-  <FullScreenMap
-    taxis={driversApiRes.drivers}
+  <UpdateData
+    setPickupETA={() => {}}
     currentOffice={locations.singapore}
-    setMap={() => {}}
     taxiCount={10}
+    coords={locations.singapore.coords}
+    setTaxis={() => {}}
+    setCurrentOffice={() => {}}
+    map={{}}
   />
 );
 
 it('renders without crashing', () => {
   shallow(TestComponent);
+});
+
+it('returns null', () => {
+  const component = shallow(TestComponent);
+  expect(component.type()).toEqual(null);
 });
 
 it('renders correctly', () => {

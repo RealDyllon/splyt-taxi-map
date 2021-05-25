@@ -3,16 +3,9 @@ import toJson from 'enzyme-to-json';
 
 import locations from '../data/locations';
 import driversApiRes from '../data/mock/driversApi';
-import FullScreenMap from './FullScreenMap';
+import PickupETA from './PickupETA';
 
-const TestComponent = (
-  <FullScreenMap
-    taxis={driversApiRes.drivers}
-    currentOffice={locations.singapore}
-    setMap={() => {}}
-    taxiCount={10}
-  />
-);
+const TestComponent = <PickupETA pickupETA={5} />;
 
 it('renders without crashing', () => {
   shallow(TestComponent);

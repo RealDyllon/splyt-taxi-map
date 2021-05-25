@@ -1,16 +1,14 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import locations from '../data/locations';
-import driversApiRes from '../data/mock/driversApi';
-import FullScreenMap from './FullScreenMap';
+import locations from '../../data/locations';
+import OfficePicker from './OfficePicker';
 
 const TestComponent = (
-  <FullScreenMap
-    taxis={driversApiRes.drivers}
+  <OfficePicker
     currentOffice={locations.singapore}
-    setMap={() => {}}
-    taxiCount={10}
+    setCurrentOffice={() => {}}
+    map={{}}
   />
 );
 

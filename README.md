@@ -1,8 +1,14 @@
 # Splyt-Taxi-Map
 
+Hosted Webapp is available at: [https://splyt-taxi-map.netlify.app/](https://splyt-taxi-map.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn install`
+
+Installs all dependencies to run the app.
 
 ### `yarn start`
 

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<styled.div>
+  <ComponentEnhancer(undefined)
+    activeDotStyle={Object {}}
+    className=""
+    disabled={false}
+    dotStyle={Object {}}
+    dots={false}
+    handle={[Function]}
+    handleStyle={
+      Object {
+        "backgroundColor": "#fff",
+        "border": "2px #46bedb solid",
+        "boxShadow": "rgba(0, 0, 0, 0.55) 0px 3px 15px",
+        "height": 28,
+        "marginLeft": -12,
+        "marginTop": -14,
+        "width": 28,
+      }
+    }
+    included={true}
+    marks={Object {}}
+    max={30}
+    min={5}
+    onAfterChange={[Function]}
+    onBeforeChange={[Function]}
+    onChange={[Function]}
+    prefixCls="rc-slider"
+    railStyle={
+      Object {
+        "background": "#aaa",
+        "width": 5,
+      }
+    }
+    reverse={false}
+    step={1}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    trackStyle={
+      Object {
+        "background": "#FFC135",
+        "width": 5,
+      }
+    }
+    value={10}
+    vertical={true}
+  />
+</styled.div>
+`;

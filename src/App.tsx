@@ -4,8 +4,8 @@ import './App.css';
 
 import FullScreenMap from './components/FullScreenMap';
 import MapControls from './components/MapControls/index';
-import UpdateData from './components/MapControls/UpdateData';
-import PickupETA from './components/MapControls/PickupETA';
+import UpdateData from './components/UpdateData';
+import PickupETA from './components/PickupETA';
 import locations, { locationType } from './data/locations';
 import taxi from './ts/interfaces/taxi';
 

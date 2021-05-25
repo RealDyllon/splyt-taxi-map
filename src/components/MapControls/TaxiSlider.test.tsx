@@ -1,17 +1,11 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import locations from '../data/locations';
-import driversApiRes from '../data/mock/driversApi';
-import FullScreenMap from './FullScreenMap';
+import locations from '../../data/locations';
+import TaxiSlider from './TaxiSlider';
 
 const TestComponent = (
-  <FullScreenMap
-    taxis={driversApiRes.drivers}
-    currentOffice={locations.singapore}
-    setMap={() => {}}
-    taxiCount={10}
-  />
+  <TaxiSlider taxiCount={10} setTaxiCount={() => {}} />
 );
 
 it('renders without crashing', () => {

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Fragment>
+  <OfficePicker
+    currentOffice={
+      Object {
+        "coords": Array [
+          1.285194,
+          103.8522982,
+        ],
+        "id": 1,
+        "name": "Singapore",
+      }
+    }
+    map={Object {}}
+    setCurrentOffice={[Function]}
+  />
+  <TaxiSlider
+    setTaxiCount={[Function]}
+    taxiCount={10}
+  />
+</Fragment>
+`;
