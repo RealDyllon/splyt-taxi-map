@@ -4,7 +4,7 @@ import {
   MapContainer,
   TileLayer,
   Marker,
-  Popup,
+  // Popup,
 } from 'react-leaflet';
 
 import { locationType } from '../data/locations';
@@ -33,10 +33,11 @@ interface Props {
   taxis: taxi[];
   currentOffice: locationType;
   setMap: any; // todo
+  taxiCount: number;
 }
 
 const FullScreenMap: React.FC<Props> = (props: Props) => {
-  const { taxis, currentOffice, setMap } = props;
+  const { taxis, currentOffice, setMap, taxiCount } = props;
 
   const position: LatLngTuple = currentOffice.coords; // todo: get browser gps coords for this in app.js
 
@@ -59,13 +60,13 @@ const FullScreenMap: React.FC<Props> = (props: Props) => {
       />
 
       <Marker position={position} icon={mapPinIcon}>
-        <Popup className="leafletOfficePopup">
+        {/* <Popup className="leafletOfficePopup">
           Splyt&apos;s {currentOffice.name} office
-        </Popup>
+        </Popup> */}
       </Marker>
 
       {/* taxis go here */}
-      {taxis.map((taxiItem) => {
+      {taxis.slice(0, taxiCount).map((taxiItem) => {
         const taxiPosition: LatLngTuple = [
           taxiItem.location.latitude,
           taxiItem.location.longitude,
@@ -79,7 +80,7 @@ const FullScreenMap: React.FC<Props> = (props: Props) => {
             rotationOrigin="center"
             icon={mapTaxiIcon}
           >
-            <Popup className="leafletTaxiPopup">taxi</Popup>
+            {/* <Popup className="leafletTaxiPopup">taxi</Popup> */}
           </RotatedMarker>
         );
       })}
