@@ -7,6 +7,7 @@ interface RoundButtonProps {
 export const RoundButton = styled.img<RoundButtonProps>`
   height: 18px;
   width: 18px;
+  padding: 1px 0 0 2px;
   margin-right: 4px;
   ${(props) =>
     props.active &&
