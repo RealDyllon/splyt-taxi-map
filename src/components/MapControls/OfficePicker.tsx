@@ -11,16 +11,18 @@ import { RoundButton } from '../styled';
 
 const OfficePickerWrapper = styled.div`
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   position: absolute;
   bottom: 18px;
   left: 12px;
   right: 12px;
-
   z-index: 999;
-  /* box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;  */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const OfficePickerContainer = styled.div`
@@ -30,18 +32,14 @@ const OfficePickerContainer = styled.div`
   background: #fff;
   display: flex;
   flex-direction: row;
-  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px,
-    rgba(17, 17, 26, 0.1) 0px 16px 48px; */
-
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 48px;
-
-  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-  padding: 8px; */
   user-select: none;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 interface OfficeButtonProps {
@@ -79,6 +77,18 @@ const CurrentLocationButton = styled.div`
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 48px;
+
+  transition: all 0.2s ease-in-out;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+
+  &:active {
+    background-color: #eee;
+  }
 `;
 
 export interface OfficePickerProps {
@@ -147,9 +157,6 @@ const OfficePicker = (props: OfficePickerProps) => {
             </OfficeButton>
           );
         })}
-        {/* <CurrentLocationButton onClick={handleCurrentLocationClick}>
-          <RoundButton alt="" src={locationArrowBlack} />
-        </CurrentLocationButton> */}
       </OfficePickerContainer>
     </OfficePickerWrapper>
   );
