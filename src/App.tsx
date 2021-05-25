@@ -28,6 +28,7 @@ const App: React.FC = () => {
         taxis={taxis}
         currentOffice={currentOffice}
         setMap={setMap}
+        taxiCount={taxiCount}
       />
       <MapControls
         taxiCount={taxiCount}
