@@ -15,13 +15,14 @@ const OfficePickerWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 18px;
+  bottom: 26px;
   left: 12px;
   right: 12px;
   z-index: 999;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    bottom: 44px;
   }
 `;
 
